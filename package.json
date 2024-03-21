@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx --watch server.ts",
-    "setup": "tsx ./src/setup/setup.ts",
-    "deleteTable": "tsx ./src/setup/deleteTable.ts"
+    "setup": "tsx ./src/setup/setup.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +14,7 @@
     "@types/node": "^20.11.30",
     "fastify": "^4.26.2",
     "postgres": "^3.4.3",
+    "redis": "^4.6.13",
     "tsx": "^4.7.1",
     "typescript": "^5.4.3",
     "zod": "^3.22.4"
