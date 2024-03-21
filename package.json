@@ -1,0 +1,22 @@
+{
+  "name": "pizza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx --watch server.ts",
+    "setup": "tsx ./src/setup/setup.ts",
+    "deleteTable": "tsx ./src/setup/deleteTable.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "fastify": "^4.26.2",
+    "postgres": "^3.4.3",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.3",
+    "zod": "^3.22.4"
+  }
+}
