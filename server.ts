@@ -18,8 +18,9 @@ app.post("/order", async (req, reply) => {
     pagamentmethod: string(),
   });
 
+  
   const { flavor, price, quantity, pizzatype, pagamentmethod } =
-    schemaOrder.parse(req.body);
+  schemaOrder.parse(req.body);
 
   try {
     const formatName = `${flavor}`;
@@ -64,8 +65,8 @@ app.get("/api/analyse", async (req, reply) => {
   const result = await redis.zRangeByScoreWithScores("analyseOrder", 0, 25);
 
   const analyse = result
-    .sort((a, b) => b.score - a.score)
-    .map((item) => {
+    .sort((a:any, b:any) => b.score - a.score)
+    .map((item:any) => {
       return {
         flavors: item.value,
         qtdFlavor: item.score,
